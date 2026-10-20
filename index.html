@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Ratul Barua - Lecturer, Department of CSE, Port City International University. Research in machine learning, deep learning, NLP, computer vision and renewable energy.">
+<title>Ratul Barua</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;1,400&family=Source+Code+Pro:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 16px; scroll-behavior: smooth; }
+body { font-family: 'Source Sans Pro', -apple-system, sans-serif; font-size: 1rem; line-height: 1.6; color: #333; background: #fff; }
+a { color: #1a6fa6; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* MASTHEAD */
+.masthead { background: #fff; border-bottom: 1px solid #e0e0e0; padding: 0 2rem; position: sticky; top: 0; z-index: 100; }
+.masthead-inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; height: 56px; }
+.masthead-title { font-family: Georgia, serif; font-size: 1.1rem; font-weight: normal; color: #333; letter-spacing: 0.01em; }
+.greedy-nav { display: flex; gap: 0; list-style: none; }
+.greedy-nav li a { display: block; padding: 0 1rem; height: 56px; line-height: 56px; font-size: 0.875rem; color: #555; text-decoration: none; font-weight: 600; letter-spacing: 0.02em; transition: color 0.15s; }
+.greedy-nav li a:hover { color: #1a6fa6; }
+
+/* LAYOUT */
+.page-wrapper { max-width: 1200px; margin: 0 auto; padding: 2rem 2rem; display: grid; grid-template-columns: 260px 1fr; gap: 3rem; align-items: start; }
+
+/* SIDEBAR */
+.sidebar { position: sticky; top: 72px; }
+.author-avatar img { display: block; width: 200px; height: 200px; border-radius: 50%; object-fit: cover; object-position: top; margin: 0 auto 1rem; border: 4px solid #e0e0e0; }
+.author-name { font-family: Georgia, serif; font-size: 1.2rem; font-weight: normal; text-align: center; margin-bottom: 0.15rem; }
+.author-bio { font-size: 0.85rem; color: #555; text-align: center; line-height: 1.5; margin-bottom: 1.25rem; }
+.author-links { list-style: none; padding: 0; }
+.author-links li { margin-bottom: 0.45rem; }
+.author-links li a { display: flex; align-items: center; gap: 0.6rem; font-size: 0.875rem; color: #444; text-decoration: none; padding: 0.15rem 0; }
+.author-links li a:hover { color: #1a6fa6; text-decoration: none; }
+.author-links li a i { width: 18px; font-size: 1rem; flex-shrink: 0; }
+.icon-email { color: #e74c3c; }
+.icon-cv { color: #27ae60; }
+.icon-scholar { color: #4285f4; }
+.icon-linkedin { color: #0a66c2; }
+.icon-github { color: #333; }
+.icon-location { color: #e67e22; }
+.author-links li a:hover i { opacity: 0.8; }
+.sidebar-divider { border: none; border-top: 1px solid #e8e8e8; margin: 1.25rem 0; }
+
+/* MAIN CONTENT */
+.page-content { min-width: 0; }
+h1, h2 { font-family: Georgia, serif; font-weight: normal; }
+.page-content h1.page-title { font-size: 1.8rem; margin-bottom: 1rem; color: #222; }
+.page-content h2 { font-size: 1.3rem; color: #222; margin-top: 2rem; margin-bottom: 0.75rem; padding-bottom: 0.25rem; border-bottom: 1px solid #e0e0e0; }
+.page-content h3 { font-family: Georgia, serif; font-weight: normal; font-size: 1.05rem; color: #222; margin-top: 1.5rem; margin-bottom: 0.6rem; }
+.page-content p { margin-bottom: 0.9rem; color: #333; text-align: justify; }
+
+/* UPDATES */
+.updates-block { background: #f8f8f8; border: 1px solid #e0e0e0; border-radius: 4px; padding: 1rem 1.25rem; font-family: 'Source Code Pro', 'Courier New', monospace; font-size: 0.82rem; line-height: 1.7; color: #333; overflow-x: auto; max-height: 280px; overflow-y: auto; text-align: justify; }
+.update-row { display: flex; gap: 1rem; margin-bottom: 0.1rem; }
+.update-date { white-space: nowrap; color: #888; min-width: 110px; }
+.update-text a { color: #1a6fa6; }
+
+/* PUBLICATIONS */
+.pub-scroll { max-height: 520px; overflow-y: auto; border: 1px solid #e0e0e0; border-radius: 4px; padding: 1rem 1.25rem; background: #fafafa; }
+.pub-list { list-style: none; padding: 0; }
+.pub-item { margin-bottom: 1.3rem; padding-bottom: 1.3rem; border-bottom: 1px solid #ebebeb; }
+.pub-item:last-child { border-bottom: none; margin-bottom: 0; }
+.pub-title { font-weight: 600; color: #222; margin-bottom: 0.2rem; font-size: 0.93rem; }
+.pub-title a { color: #222; }
+.pub-title a:hover { color: #1a6fa6; }
+.pub-authors { font-size: 0.855rem; color: #555; margin-bottom: 0.15rem; line-height: 1.5; }
+.pub-authors strong { color: #111; }
+.pub-venue { font-size: 0.84rem; color: #777; font-style: italic; margin-bottom: 0.3rem; }
+.pub-venue .venue-tag { background: #e8f0fe; color: #1a5fa6; padding: 0.1rem 0.45rem; border-radius: 3px; font-style: normal; font-size: 0.76rem; font-weight: 600; margin-left: 0.35rem; vertical-align: middle; }
+.pub-links { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+.pub-link { display: inline-flex; align-items: center; gap: 0.3rem; font-size: 0.78rem; color: #fff; background: #1a6fa6; padding: 0.18rem 0.6rem; border-radius: 3px; text-decoration: none; transition: background 0.15s; }
+.pub-link:hover { background: #145a8a; text-decoration: none; }
+.review-list { list-style: disc; margin-left: 1.5rem; font-size: 0.9rem; color: #333; }
+.review-list li { margin-bottom: 0.5rem; }
+.review-list .review-authors { color: #666; font-size: 0.85rem; }
+
+/* EXPERIENCE */
+.exp-item { margin-bottom: 1.5rem; }
+.exp-role { font-weight: 600; color: #222; font-size: 0.95rem; }
+.exp-place { color: #1a6fa6; font-size: 0.9rem; }
+.exp-date { font-size: 0.85rem; color: #888; margin-bottom: 0.3rem; }
+.exp-desc { font-size: 0.875rem; color: #444; margin-top: 0.3rem; }
+.exp-desc li { margin-bottom: 0.25rem; margin-left: 1.2rem; }
+
+/* RESEARCH / LISTS */
+.research-areas { list-style: disc; margin-left: 1.5rem; color: #333; font-size: 0.95rem; }
+.research-areas li { margin-bottom: 0.3rem; }
+
+/* SKILLS TABLE */
+.skills-table { width: 100%; border-collapse: collapse; font-size: 0.875rem; margin-top: 0.5rem; }
+.skills-table td { padding: 0.4rem 0.75rem; border: 1px solid #e8e8e8; vertical-align: top; }
+.skills-table td:first-child { font-weight: 600; color: #444; background: #fafafa; width: 140px; white-space: nowrap; }
+
+/* EDUCATION */
+.edu-item { margin-bottom: 1.25rem; }
+.edu-degree { font-weight: 600; color: #222; }
+.edu-school { color: #1a6fa6; }
+.edu-date { font-size: 0.85rem; color: #888; }
+.edu-details { font-size: 0.875rem; color: #444; margin-top: 0.2rem; }
+
+/* PROJECTS */
+.project-item { margin-bottom: 1.25rem; }
+.project-title { font-weight: 600; color: #222; font-size: 0.95rem; }
+.project-desc { font-size: 0.875rem; color: #444; margin-top: 0.2rem; }
+.project-tech { margin-top: 0.3rem; display: flex; flex-wrap: wrap; gap: 0.3rem; }
+.tech-tag { background: #f0f0f0; color: #555; padding: 0.1rem 0.5rem; border-radius: 12px; font-size: 0.78rem; }
+
+/* TRAINING */
+.training-item { margin-bottom: 0.9rem; padding-bottom: 0.9rem; border-bottom: 1px solid #f0f0f0; }
+.training-item:last-child { border-bottom: none; }
+.training-name { font-weight: 600; color: #222; font-size: 0.9rem; }
+.training-org { font-size: 0.85rem; color: #555; margin-top: 0.1rem; }
+
+/* FOOTER */
+footer { margin-top: 4rem; border-top: 1px solid #e0e0e0; padding: 1.5rem 2rem; text-align: center; font-size: 0.8rem; color: #999; }
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .page-wrapper { grid-template-columns: 1fr; }
+  .sidebar { position: static; }
+  .author-avatar img { width: 140px; height: 140px; }
+  .greedy-nav { display: none; }
+}
+</style>
+</head>
+<body>
+
+<!-- MASTHEAD -->
+<div class="masthead">
+  <div class="masthead-inner">
+    <span class="masthead-title">Ratul Barua</span>
+    <ul class="greedy-nav">
+      <li><a href="#about">About</a></li>
+      <li><a href="#research">Research</a></li>
+      <li><a href="#publications">Publications</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#projects">Projects</a></li>
+    </ul>
+  </div>
+</div>
+
+<!-- MAIN LAYOUT -->
+<div class="page-wrapper">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="author-avatar">
+      <!-- Put your photo at images/profile.jpg -->
+      <img src="images/profile.jpg" alt="Ratul Barua">
+    </div>
+    <div class="author-name">Ratul Barua</div>
+    <div class="author-bio">Lecturer, Dept. of CSE<br>Port City International University<br>Chattogram, Bangladesh</div>
+    <hr class="sidebar-divider">
+    <ul class="author-links">
+      <li><a href="mailto:ratulbarua.cse@gmail.com"><i class="fas fa-envelope icon-email"></i> ratulbarua.cse@gmail.com</a></li>
+      <li><a href="assets/Ratul_Barua_CV.pdf" target="_blank"><i class="fas fa-file-pdf icon-cv"></i> CV / Resume</a></li>
+      <!-- TODO: replace # with your real links -->
+      <li><a href="#" target="_blank"><i class="fas fa-graduation-cap icon-scholar"></i> Google Scholar</a></li>
+      <li><a href="#" target="_blank"><i class="fab fa-linkedin icon-linkedin"></i> LinkedIn</a></li>
+      <li><a href="https://github.com/ratulbarua" target="_blank"><i class="fab fa-github icon-github"></i> GitHub</a></li>
+      <li><a href="https://www.google.com/maps/search/?api=1&query=Chattogram+Bangladesh" target="_blank"><i class="fas fa-map-marker-alt icon-location"></i> Chattogram, Bangladesh</a></li>
+    </ul>
+    <hr class="sidebar-divider">
+  </aside>
+
+  <!-- PAGE CONTENT -->
+  <main class="page-content">
+
+    <!-- ABOUT -->
+    <section id="about">
+      <h1 class="page-title">Hello, this is Ratul,</h1>
+      <p>
+        I am a Lecturer in the Department of Computer Science and Engineering at <a href="https://www.portcity.edu.bd/" target="_blank">Port City International University (PCIU)</a>, Chattogram, Bangladesh. My research interests span machine learning, deep learning, natural language processing, computer vision, digital image processing, multimodal learning and renewable energy. My work includes solar irradiance forecasting, Bengali text classification, explainable AI for plant disease detection, medical audio analysis, and efficient language models.
+      </p>
+      <p>
+        At PCIU, I teach Artificial Intelligence, Pattern Recognition, Data Structure, Structured Programming Language, Discrete Mathematics, and Mathematical and Probabilistic Analysis, and I supervise undergraduate thesis and project works. I earned my B.Sc. in Computer Science and Engineering from PCIU in February 2022. Before joining PCIU as a Lecturer in July 2023, I worked as a Research Assistant in the Department of Civil Engineering at Chittagong University of Engineering and Technology (CUET) and as a Computer Instructor at MAS Marine Academy.
+      </p>
+      <p>
+        <strong>Contact: 📧</strong> <a href="mailto:ratulbarua.cse@gmail.com">ratulbarua.cse@gmail.com</a> &nbsp;·&nbsp;
+        <strong>CV:</strong> <a href="assets/Ratul_Barua_CV.pdf" target="_blank">[Resume]</a>
+      </p>
+    </section>
+
+    <!-- UPDATES -->
+    <section id="updates">
+      <h2>Updates</h2>
+      <div class="updates-block">
+        <div class="update-row"><span class="update-date">2026</span><span class="update-text">Honored to receive the <strong>Best Paper Award (CSE Track)</strong> at ICSDEHE 2026.</span></div>
+        <div class="update-row"><span class="update-date">2026</span><span class="update-text">Paper accepted at ICTD 2026: Data-Driven Analysis of Injury Severity in Pennsylvania Single-Motorcycle Lane-Departure Crashes.</span></div>
+        <div class="update-row"><span class="update-date">2025</span><span class="update-text">Paper published at COMPAS 2025: Forecasting Solar Irradiance in Southern Bangladesh using Transformer-Based Approaches.</span></div>
+        <div class="update-row"><span class="update-date">2025</span><span class="update-text">Three papers published at ICCCNT 2025: Bengali emotion classification, email spam detection, and chronic heart failure detection.</span></div>
+        <div class="update-row"><span class="update-date">2024</span><span class="update-text">Paper published at ICRPSET 2024: Bengali Hate Speech Categorization: A Comparison of Hybrid Deep Learning and Transformer-Based Models.</span></div>
+        <div class="update-row"><span class="update-date">July 2023</span><span class="update-text">Joined PCIU as a Lecturer in the Department of Computer Science and Engineering.</span></div>
+        <div class="update-row"><span class="update-date">March 2023</span><span class="update-text">Joined MAS Marine Academy as a Computer Instructor, Department of Marine Engineering.</span></div>
+        <div class="update-row"><span class="update-date">June 2022</span><span class="update-text">Joined CUET as a Research Assistant, Department of Civil Engineering.</span></div>
+        <div class="update-row"><span class="update-date">2022</span><span class="update-text">Paper published in Cogent Engineering: Contingency analysis and adoption of STATCOM in the Western Grid of Bangladesh.</span></div>
+        <div class="update-row"><span class="update-date">February 2022</span><span class="update-text">Graduated BSc in CSE from Port City International University, Bangladesh.</span></div>
+      </div>
+    </section>
+
+    <!-- RESEARCH -->
+    <section id="research">
+      <h2>Research Interests</h2>
+      <ul class="research-areas">
+        <li><strong>Machine Learning &amp; Deep Learning</strong> — time-series forecasting, classification, and explainable AI (XAI) for applied problems.</li>
+        <li><strong>Natural Language Processing</strong> — Bengali emotion classification and hate speech categorization, hallucination reduction in large language models, and efficient multilingual Text-to-SQL with small language models.</li>
+        <li><strong>Computer Vision &amp; Digital Image Processing</strong> — plant disease detection and image-based classification.</li>
+        <li><strong>Multimodal Learning</strong> — unified architectures for multidimensional human emotion recognition.</li>
+        <li><strong>Renewable Energy</strong> — solar irradiance forecasting, wind–solar hybrid grids, and power system analysis.</li>
+      </ul>
+    </section>
+
+    <!-- PUBLICATIONS -->
+    <section id="publications">
+      <h2>Publications</h2>
+      <!-- TODO: replace every href="#" below with the real paper link -->
+      <div class="pub-scroll">
+        <ol class="pub-list">
+
+          <li class="pub-item">
+            <div class="pub-title"><a href="#" target="_blank">Data-Driven Analysis of Injury Severity in Pennsylvania Single-Motorcycle Lane-Departure Crashes</a></div>
+            <div class="pub-authors"><strong>R. Barua</strong>; SMR Rahman; S Das; P Saeidian</div>
+            <div class="pub-venue">International Conference on Transportation and Development <span class="venue-tag">ICTD 2026</span></div>
+            <div class="pub-links">
+              <a class="pub-link" href="#" target="_blank"><i class="fas fa-external-link-alt"></i> Paper</a>
+            </div>
+          </li>
+
+          <li class="pub-item">
+            <div class="pub-title"><a href="#" target="_blank">Time-Series Forecasting for Forex: A Comparative Study on GBP/USD, AUD/USD, and AUD/NZD</a></div>
+            <div class="pub-authors"><strong>R. Barua</strong>; MZK Khan; MI Hossen; M Hasnain; F. Rashid</div>
+            <div class="pub-venue"><!-- TODO: add venue --></div>
+            <div class="pub-links">
+              <a class="pub-link" href="#" target="_blank"><i class="fas fa-external-link-alt"></i> Paper</a>
+            </div>
+          </li>
+
+          <li class="pub-item">
+            <div class="pub-title"><a href="#" target="_blank">Forecasting Solar Irradiance in Southern Bangladesh using Transformer-Based Approaches</a></div>
+            <div class="pub-authors"><strong>R. Barua</strong>; N. Jannat; N. Barua; M. Hasnain; M. I. Hossen; Z. R. Chowdhury; P. Barua; R. Barua</div>
+            <div class="pub-venue">2025 IEEE 2nd International Conference on Computing, Applications and Systems <span class="venue-tag">COMPAS 2025</span></div>
+            <div class="pub-links">
+              <a class="pub-link" href="#" target="_blank"><i class="fas fa-external-link-alt"></i> Paper</a>
+            </div>
+          </li>
+
+          <li class="pub-item">
+            <div class="pub-title"><a href="#" target="_blank">A Deep Neural Network and XAI Framework for Detecting Bacterial Bell Pepper Leaf Disease</a></div>
+            <div class="pub-authors">M. I. Hossen; M. Hasnain; M. Y. Nabi; M. Aiman; M. A. Islam; <strong>R. Barua</strong></div>
+            <div class="pub-venue"><!-- TODO: add venue --></div>
+            <div class="pub-links">
+              <a class="pub-link" href="#" target="_blank"><i class="fas fa-external-link-alt"></i> Paper</a>
+            </div>
+          </li>
+
+          <li class="pub-item">
+            <div class="pub-title"><a href="#" target="_blank">Exploring the Effect of Class Imbalance on Bengali Textual Emotion Classification</a></div>
+            <div class="pub-authors">G. Rahman; M. Z. Chowdhury; S. Nur; Md. S. Ullah; <strong>R. Barua</strong>; Md. Omayer</div>
+            <div class="pub-venue">2025 International IEEE Conference on Computing, Communication and Networking Technologies <span class="venue-tag">ICCCNT 2025</span></div>
+            <div class="pub-links">
+              <a class="pub-link" href="#" target="_blank"><i class="fas fa-external-link-alt"></i> Paper</a>
+            </div>
+          </li>
+
+          <li class="pub-item">
+            <div class="pub-title"><a href="#" target="_blank">A Comprehensive Machine Learning Approach to Email Spam Detection</a></div>
+            <div class="pub-authors">Prarona Barua; Joyjit Paul; <strong>Ratul Barua</strong>; Shafayet Nur</div>
+            <div class="pub-venue">2025 International IEEE Conference on Computing, Communication and Networking Technologies <span class="venue-tag">ICCCNT 2025</span></div>
+            <div class="pub-links">
+              <a class="pub-link" href="#" target="_blank"><i class="fas fa-external-link-alt"></i> Paper</a>
+            </div>
+          </li>
+
+          <li class="pub-item">
+            <div class="pub-title"><a href="#" target="_blank">Spectrogram and Audio Based Detection of Chronic Heart Failure Using Machine Learning and Deep Learning Techniques</a></div>
+            <div class="pub-authors">S. Zamil; F. Akther; <strong>R. Barua</strong>; S. Nur; T. Amrine; M. I. Hossen; M. Hasnain</div>
+            <div class="pub-venue">2025 International IEEE Conference on Computing, Communication and Networking Technologies <span class="venue-tag">ICCCNT 2025</span></div>
+            <div class="pub-links">
+              <a class="pub-link" href="#" target="_blank"><i class="fas fa-external-link-alt"></i> Paper</a>
+            </div>
+          </li>
+
+          <li class="pub-item">
+            <div class="pub-title"><a href="https://ieeexplore.ieee.org/document/10955953" target="_blank">Bengali Hate Speech Categorization: A Comparison of Hybrid Deep Learning and Transformer-Based Models</a></div>
+            <div class="pub-authors">I. Jahan; M. Z. Chowdhury; S. Nur; Z. R. Chowdhury; <strong>R. Barua</strong>; T. Amrine</div>
+            <div class="pub-venue">2024 International Conference on Recent Progresses in Science, Engineering and Technology <span class="venue-tag">ICRPSET 2024</span></div>
+            <div class="pub-links">
+              <a class="pub-link" href="https://ieeexplore.ieee.org/document/10955953" target="_blank"><i class="fas fa-external-link-alt"></i> Paper</a>
+            </div>
+          </li>
+
+          <li class="pub-item">
+            <div class="pub-title"><a href="#" target="_blank">Contingency analysis and adoption of STATCOM in highly renewable energy penetrated Western Grid of Bangladesh</a></div>
+            <div class="pub-authors">Pollen Barua; <strong>Ratul Barua</strong>; V. Shekher; M. Quamruzzaman; M. G. Rabbani</div>
+            <div class="pub-venue">Cogent Engineering, Vol. 9, No. 1, 2022 <span class="venue-tag">Journal</span></div>
+            <div class="pub-links">
+              <a class="pub-link" href="#" target="_blank"><i class="fas fa-external-link-alt"></i> Paper</a>
+            </div>
+          </li>
+
+          <li class="pub-item">
+            <div class="pub-title"><a href="#" target="_blank">Machine Learning Based Solar Energy Forecasting and Wind-Solar Based Hybrid Grid Arrangement at Patenga Coastal Area, Bangladesh</a></div>
+            <div class="pub-authors">Pollen Barua; <strong>Ratul Barua</strong></div>
+            <div class="pub-venue">2021 IEEE International Conference on Power, Electrical, Electronic and Industrial Applications <span class="venue-tag">PEEIACON 2021</span></div>
+            <div class="pub-links">
+              <a class="pub-link" href="#" target="_blank"><i class="fas fa-external-link-alt"></i> Paper</a>
+            </div>
+          </li>
+
+        </ol>
+      </div>
+      <p style="font-size:0.82rem; color:#888; margin-top:0.6rem; text-align:right;">
+        Full list on <a href="#" target="_blank">Google Scholar →</a>
+      </p>
+
+      <h3>Research Projects Under Review</h3>
+      <ul class="review-list">
+        <li>A Unified Multi-Model Deep Learning Architecture for Multidimensional Human Emotion Recognition<br><span class="review-authors">R. Hassan; <strong>R. Barua</strong>; A.H. Tanbin; S. Sarkar</span></li>
+        <li>A-RICD: Adapter-based Resource-efficient Induce-then-Contrast Decoding for Reducing Hallucinations in Large Language Models<br><span class="review-authors">A.B Akon; A Chakraborty; <strong>R. Barua</strong></span></li>
+        <li>Cost-Efficient Multilingual Text-to-SQL Conversion Using Small Language Models: A Comparative and Generalization Study<br><span class="review-authors">IA Mazumder; S Biswas; <strong>R. Barua</strong></span></li>
+      </ul>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience">
+      <h2>Experience</h2>
+
+      <div class="exp-item">
+        <div class="exp-role">Lecturer</div>
+        <div class="exp-place">Department of Computer Science and Engineering, Port City International University (PCIU)</div>
+        <div class="exp-date">July 2023 – Present &nbsp;·&nbsp; Chattogram, Bangladesh</div>
+        <div class="exp-desc">
+          <ul>
+            <li>Courses: Artificial Intelligence, Pattern Recognition, Data Structure, Structured Programming Language, Discrete Mathematics, Mathematical and Probabilistic Analysis</li>
+            <li>Thesis and project supervision</li>
+            <li>Member, PCIU Journal Committee</li>
+            <li>Convener, Social Media and Website Monitoring Committee</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-role">Computer Instructor</div>
+        <div class="exp-place">Department of Marine Engineering, MAS Marine Academy</div>
+        <div class="exp-date">March 2023 – June 2023 &nbsp;·&nbsp; Chattogram, Bangladesh</div>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-role">Research Assistant</div>
+        <div class="exp-place">Department of Civil Engineering, Chittagong University of Engineering and Technology (CUET)</div>
+        <div class="exp-date">June 2022 – February 2023 &nbsp;·&nbsp; Chattogram, Bangladesh</div>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="education">
+      <h2>Education</h2>
+
+      <div class="edu-item">
+        <div class="edu-degree">BSc in Computer Science and Engineering</div>
+        <div class="edu-school">Port City International University (PCIU), Chattogram, Bangladesh</div>
+        <div class="edu-date">January 2018 – February 2022</div>
+        <div class="edu-details">CGPA: 3.59 / 4.00</div>
+      </div>
+
+      <div class="edu-item">
+        <div class="edu-degree">IELTS</div>
+        <div class="edu-details">Overall 6.5 &nbsp;·&nbsp; Listening 6.5 &nbsp;·&nbsp; Reading 6.5 &nbsp;·&nbsp; Writing 7.0 &nbsp;·&nbsp; Speaking 5.5</div>
+      </div>
+
+      <h2>Awards &amp; Honors</h2>
+      <ul class="research-areas">
+        <li>Best Paper Award (CSE Track), ICSDEHE 2026</li>
+        <li>Academic Performance Based Scholarship (multiple trimesters), PCIU</li>
+        <li>Ranked 4th among 15 teams, PCIU Hackathon, 2018</li>
+      </ul>
+    </section>
+
+    <!-- PROFESSIONAL TRAINING -->
+    <section id="training">
+      <h2>Professional Training</h2>
+
+      <div class="training-item">
+        <div class="training-name">Faculty Training and Development Program</div>
+        <div class="training-org">Institutional Quality Assurance Cell (IQAC), Port City International University, Bangladesh</div>
+      </div>
+
+      <div class="training-item">
+        <div class="training-name">Concept and Development of Outcome Based Education (OBE) Curriculum for Quality Improvement in Higher Education</div>
+        <div class="training-org">Institutional Quality Assurance Cell (IQAC), Port City International University, Bangladesh</div>
+      </div>
+
+      <h2>Online Courses</h2>
+      <div class="training-item">
+        <div class="training-name">Computer Vision – Object Detection with OpenCV and Python</div>
+        <div class="training-org">Coursera</div>
+      </div>
+      <div class="training-item">
+        <div class="training-name">Traffic Sign Classification Using Deep Learning in Python/Keras</div>
+        <div class="training-org">Coursera Project Network</div>
+      </div>
+      <div class="training-item">
+        <div class="training-name">Programming for Everybody (Getting Started with Python)</div>
+        <div class="training-org">Coursera | University of Michigan</div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+      <h2>Selected Projects</h2>
+      <!-- TODO: edit these descriptions to match what you actually built -->
+
+      <div class="project-item">
+        <div class="project-title">Solar Irradiance Prediction using Machine Learning Models</div>
+        <div class="project-desc">Machine learning models for forecasting solar irradiance.</div>
+        <div class="project-tech">
+          <span class="tech-tag">Python</span><span class="tech-tag">Machine Learning</span>
+        </div>
+      </div>
+
+      <div class="project-item">
+        <div class="project-title">Hand-Gestured Robot for Human–Computer Interaction</div>
+        <div class="project-desc">A robot controlled through hand gestures.</div>
+      </div>
+
+      <div class="project-item">
+        <div class="project-title">Dr. Farmer: A Smart Agriculture Assistance System</div>
+        <div class="project-desc">A smart assistance system to support farmers.</div>
+      </div>
+
+      <div class="project-item">
+        <div class="project-title">Restaurant Table Reservation (RTR) Processing System</div>
+        <div class="project-desc">A system for processing restaurant table reservations.</div>
+      </div>
+
+      <div class="project-item">
+        <div class="project-title">Online Bidding Platform for E-Commerce Applications</div>
+        <div class="project-desc">An online bidding platform for e-commerce.</div>
+      </div>
+
+      <h2>Co-curricular Activities</h2>
+      <ul class="research-areas">
+        <li>Member, Advisory Panel, PCIU Computer Club</li>
+        <li>Owner &amp; Founder, Ratul's Research Center</li>
+      </ul>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+      <h2>Technical Skills</h2>
+      <table class="skills-table">
+        <tr><td>Languages</td><td>C, C++, Python, Java</td></tr>
+        <tr><td>ML / DL</td><td>TensorFlow, Keras, Hugging Face, OpenCV, Scikit-learn, NLTK, BNLTK, Gensim, Pandas</td></tr>
+        <tr><td>Web</td><td>PHP Laravel, Python Django, JavaScript</td></tr>
+        <tr><td>Databases</td><td>MySQL, Oracle, Microsoft SQL Server 2014</td></tr>
+        <tr><td>Other</td><td>LaTeX, Microsoft Office, LibreOffice, Linux (Kali, Ubuntu), Windows</td></tr>
+      </table>
+    </section>
+
+  </main>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  © 2026 Ratul Barua &nbsp;·&nbsp;
+  Powered by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a> &nbsp;·&nbsp;
+  Layout adapted from <a href="https://shafayet-nur.github.io" target="_blank">shafayet-nur.github.io</a>
+</footer>
+
+</body>
+</html>
