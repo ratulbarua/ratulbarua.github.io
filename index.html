@@ -38,6 +38,7 @@ a:hover { text-decoration: underline; }
 .author-links li a i { width: 18px; font-size: 1rem; flex-shrink: 0; }
 .icon-email { color: #e74c3c; }
 .icon-cv { color: #27ae60; }
+.icon-web { color: #8e44ad; }
 .icon-scholar { color: #4285f4; }
 .icon-linkedin { color: #0a66c2; }
 .icon-github { color: #333; }
@@ -74,6 +75,8 @@ h1, h2 { font-family: Georgia, serif; font-weight: normal; }
 .pub-links { display: flex; gap: 0.5rem; flex-wrap: wrap; }
 .pub-link { display: inline-flex; align-items: center; gap: 0.3rem; font-size: 0.78rem; color: #fff; background: #1a6fa6; padding: 0.18rem 0.6rem; border-radius: 3px; text-decoration: none; transition: background 0.15s; }
 .pub-link:hover { background: #145a8a; text-decoration: none; }
+.pub-link.pdf { background: #c0392b; }
+.pub-link.pdf:hover { background: #a93226; }
 .review-list { list-style: disc; margin-left: 1.5rem; font-size: 0.9rem; color: #333; }
 .review-list li { margin-bottom: 0.5rem; }
 .review-list .review-authors { color: #666; font-size: 0.85rem; }
@@ -114,6 +117,7 @@ h1, h2 { font-family: Georgia, serif; font-weight: normal; }
 .training-item:last-child { border-bottom: none; }
 .training-name { font-weight: 600; color: #222; font-size: 0.9rem; }
 .training-org { font-size: 0.85rem; color: #555; margin-top: 0.1rem; }
+.cert-link { font-size: 0.8rem; margin-left: 0.4rem; font-weight: 400; }
 
 /* FOOTER */
 footer { margin-top: 4rem; border-top: 1px solid #e0e0e0; padding: 1.5rem 2rem; text-align: center; font-size: 0.8rem; color: #999; }
@@ -159,9 +163,9 @@ footer { margin-top: 4rem; border-top: 1px solid #e0e0e0; padding: 1.5rem 2rem; 
     <ul class="author-links">
       <li><a href="mailto:ratulbarua.cse@gmail.com"><i class="fas fa-envelope icon-email"></i> ratulbarua.cse@gmail.com</a></li>
       <li><a href="assets/Ratul_Barua_CV.pdf" target="_blank"><i class="fas fa-file-pdf icon-cv"></i> CV / Resume</a></li>
-      <!-- TODO: replace # with your real links -->
-      <li><a href="#" target="_blank"><i class="fas fa-graduation-cap icon-scholar"></i> Google Scholar</a></li>
-      <li><a href="#" target="_blank"><i class="fab fa-linkedin icon-linkedin"></i> LinkedIn</a></li>
+      <li><a href="https://sites.google.com/view/ratulbarua/" target="_blank"><i class="fas fa-globe icon-web"></i> Website</a></li>
+      <li><a href="https://scholar.google.com/citations?user=pBHm1fIAAAAJ&hl=en" target="_blank"><i class="fas fa-graduation-cap icon-scholar"></i> Google Scholar</a></li>
+      <li><a href="https://www.linkedin.com/in/ratulbarua/" target="_blank"><i class="fab fa-linkedin icon-linkedin"></i> LinkedIn</a></li>
       <li><a href="https://github.com/ratulbarua" target="_blank"><i class="fab fa-github icon-github"></i> GitHub</a></li>
       <li><a href="https://www.google.com/maps/search/?api=1&query=Chattogram+Bangladesh" target="_blank"><i class="fas fa-map-marker-alt icon-location"></i> Chattogram, Bangladesh</a></li>
     </ul>
@@ -218,104 +222,110 @@ footer { margin-top: 4rem; border-top: 1px solid #e0e0e0; padding: 1.5rem 2rem; 
     <!-- PUBLICATIONS -->
     <section id="publications">
       <h2>Publications</h2>
-      <!-- TODO: replace every href="#" below with the real paper link -->
       <div class="pub-scroll">
         <ol class="pub-list">
 
           <li class="pub-item">
-            <div class="pub-title"><a href="#" target="_blank">Data-Driven Analysis of Injury Severity in Pennsylvania Single-Motorcycle Lane-Departure Crashes</a></div>
+            <div class="pub-title"><a href="https://ascelibrary.org/doi/abs/10.1061/9780784487013.064" target="_blank">Data-Driven Analysis of Injury Severity in Pennsylvania Single-Motorcycle Lane-Departure Crashes</a></div>
             <div class="pub-authors"><strong>R. Barua</strong>; SMR Rahman; S Das; P Saeidian</div>
             <div class="pub-venue">International Conference on Transportation and Development <span class="venue-tag">ICTD 2026</span></div>
             <div class="pub-links">
-              <a class="pub-link" href="#" target="_blank"><i class="fas fa-external-link-alt"></i> Paper</a>
+              <a class="pub-link" href="https://ascelibrary.org/doi/abs/10.1061/9780784487013.064" target="_blank"><i class="fas fa-external-link-alt"></i> Paper</a>
+              <a class="pub-link pdf" href="https://drive.google.com/file/d/1Dct7mcFIG9U_sathB16BizpM49BerNmf/view?usp=sharing" target="_blank"><i class="fas fa-file-pdf"></i> PDF</a>
             </div>
           </li>
 
           <li class="pub-item">
-            <div class="pub-title"><a href="#" target="_blank">Time-Series Forecasting for Forex: A Comparative Study on GBP/USD, AUD/USD, and AUD/NZD</a></div>
+            <div class="pub-title"><a href="https://ieeexplore.ieee.org/abstract/document/11504040/" target="_blank">Time-Series Forecasting for Forex: A Comparative Study on GBP/USD, AUD/USD, and AUD/NZD</a></div>
             <div class="pub-authors"><strong>R. Barua</strong>; MZK Khan; MI Hossen; M Hasnain; F. Rashid</div>
-            <div class="pub-venue"><!-- TODO: add venue --></div>
+            <div class="pub-venue"><!-- TODO: add venue (not in your CV) --></div>
             <div class="pub-links">
-              <a class="pub-link" href="#" target="_blank"><i class="fas fa-external-link-alt"></i> Paper</a>
+              <a class="pub-link" href="https://ieeexplore.ieee.org/abstract/document/11504040/" target="_blank"><i class="fas fa-external-link-alt"></i> Paper</a>
+              <a class="pub-link pdf" href="https://drive.google.com/file/d/1kNalRq1mTc7HTaer1ncueWbIBmBLuCfu/view?usp=sharing" target="_blank"><i class="fas fa-file-pdf"></i> PDF</a>
             </div>
           </li>
 
           <li class="pub-item">
-            <div class="pub-title"><a href="#" target="_blank">Forecasting Solar Irradiance in Southern Bangladesh using Transformer-Based Approaches</a></div>
+            <div class="pub-title"><a href="https://ieeexplore.ieee.org/abstract/document/11381837" target="_blank">Forecasting Solar Irradiance in Southern Bangladesh using Transformer-Based Approaches</a></div>
             <div class="pub-authors"><strong>R. Barua</strong>; N. Jannat; N. Barua; M. Hasnain; M. I. Hossen; Z. R. Chowdhury; P. Barua; R. Barua</div>
             <div class="pub-venue">2025 IEEE 2nd International Conference on Computing, Applications and Systems <span class="venue-tag">COMPAS 2025</span></div>
             <div class="pub-links">
-              <a class="pub-link" href="#" target="_blank"><i class="fas fa-external-link-alt"></i> Paper</a>
+              <a class="pub-link" href="https://ieeexplore.ieee.org/abstract/document/11381837" target="_blank"><i class="fas fa-external-link-alt"></i> Paper</a>
+              <a class="pub-link pdf" href="https://drive.google.com/file/d/1oyK4FKkPOrN2yX7b-NekcaHKrPiqaLaS/view?usp=drive_link" target="_blank"><i class="fas fa-file-pdf"></i> PDF</a>
             </div>
           </li>
 
           <li class="pub-item">
-            <div class="pub-title"><a href="#" target="_blank">A Deep Neural Network and XAI Framework for Detecting Bacterial Bell Pepper Leaf Disease</a></div>
+            <div class="pub-title"><a href="https://ieeexplore.ieee.org/abstract/document/11545873" target="_blank">A Deep Neural Network and XAI Framework for Detecting Bacterial Bell Pepper Leaf Disease</a></div>
             <div class="pub-authors">M. I. Hossen; M. Hasnain; M. Y. Nabi; M. Aiman; M. A. Islam; <strong>R. Barua</strong></div>
-            <div class="pub-venue"><!-- TODO: add venue --></div>
+            <div class="pub-venue"><!-- TODO: add venue (not in your CV) --></div>
             <div class="pub-links">
-              <a class="pub-link" href="#" target="_blank"><i class="fas fa-external-link-alt"></i> Paper</a>
+              <a class="pub-link" href="https://ieeexplore.ieee.org/abstract/document/11545873" target="_blank"><i class="fas fa-external-link-alt"></i> Paper</a>
+              <a class="pub-link pdf" href="https://drive.google.com/file/d/17erxQHhrsU_oG8B1C0M3lx3i989Wwrc-/view?usp=sharing" target="_blank"><i class="fas fa-file-pdf"></i> PDF</a>
             </div>
           </li>
 
           <li class="pub-item">
-            <div class="pub-title"><a href="#" target="_blank">Exploring the Effect of Class Imbalance on Bengali Textual Emotion Classification</a></div>
+            <div class="pub-title">Exploring the Effect of Class Imbalance on Bengali Textual Emotion Classification</div>
             <div class="pub-authors">G. Rahman; M. Z. Chowdhury; S. Nur; Md. S. Ullah; <strong>R. Barua</strong>; Md. Omayer</div>
             <div class="pub-venue">2025 International IEEE Conference on Computing, Communication and Networking Technologies <span class="venue-tag">ICCCNT 2025</span></div>
             <div class="pub-links">
-              <a class="pub-link" href="#" target="_blank"><i class="fas fa-external-link-alt"></i> Paper</a>
+              <a class="pub-link pdf" href="https://drive.google.com/file/d/1x1lOTmrYUH2ctsdQCbSkluTuvKTUINWU/view?usp=drive_link" target="_blank"><i class="fas fa-file-pdf"></i> PDF</a>
             </div>
           </li>
 
           <li class="pub-item">
-            <div class="pub-title"><a href="#" target="_blank">A Comprehensive Machine Learning Approach to Email Spam Detection</a></div>
+            <div class="pub-title">A Comprehensive Machine Learning Approach to Email Spam Detection</div>
             <div class="pub-authors">Prarona Barua; Joyjit Paul; <strong>Ratul Barua</strong>; Shafayet Nur</div>
             <div class="pub-venue">2025 International IEEE Conference on Computing, Communication and Networking Technologies <span class="venue-tag">ICCCNT 2025</span></div>
             <div class="pub-links">
-              <a class="pub-link" href="#" target="_blank"><i class="fas fa-external-link-alt"></i> Paper</a>
+              <a class="pub-link pdf" href="https://drive.google.com/file/d/1v00Rm9QQqlCWQPG_2PUXo6YoFD_Ey_vr/view?usp=drive_link" target="_blank"><i class="fas fa-file-pdf"></i> PDF</a>
             </div>
           </li>
 
           <li class="pub-item">
-            <div class="pub-title"><a href="#" target="_blank">Spectrogram and Audio Based Detection of Chronic Heart Failure Using Machine Learning and Deep Learning Techniques</a></div>
+            <div class="pub-title">Spectrogram and Audio Based Detection of Chronic Heart Failure Using Machine Learning and Deep Learning Techniques</div>
             <div class="pub-authors">S. Zamil; F. Akther; <strong>R. Barua</strong>; S. Nur; T. Amrine; M. I. Hossen; M. Hasnain</div>
             <div class="pub-venue">2025 International IEEE Conference on Computing, Communication and Networking Technologies <span class="venue-tag">ICCCNT 2025</span></div>
             <div class="pub-links">
-              <a class="pub-link" href="#" target="_blank"><i class="fas fa-external-link-alt"></i> Paper</a>
+              <a class="pub-link pdf" href="https://drive.google.com/file/d/1Zuu0VKNNdeBG3UCbR_zBuYYYt4KgplEI/view?usp=drive_link" target="_blank"><i class="fas fa-file-pdf"></i> PDF</a>
             </div>
           </li>
 
           <li class="pub-item">
-            <div class="pub-title"><a href="https://ieeexplore.ieee.org/document/10955953" target="_blank">Bengali Hate Speech Categorization: A Comparison of Hybrid Deep Learning and Transformer-Based Models</a></div>
+            <div class="pub-title"><a href="https://ieeexplore.ieee.org/abstract/document/10955953" target="_blank">Bengali Hate Speech Categorization: A Comparison of Hybrid Deep Learning and Transformer-Based Models</a></div>
             <div class="pub-authors">I. Jahan; M. Z. Chowdhury; S. Nur; Z. R. Chowdhury; <strong>R. Barua</strong>; T. Amrine</div>
             <div class="pub-venue">2024 International Conference on Recent Progresses in Science, Engineering and Technology <span class="venue-tag">ICRPSET 2024</span></div>
             <div class="pub-links">
-              <a class="pub-link" href="https://ieeexplore.ieee.org/document/10955953" target="_blank"><i class="fas fa-external-link-alt"></i> Paper</a>
+              <a class="pub-link" href="https://ieeexplore.ieee.org/abstract/document/10955953" target="_blank"><i class="fas fa-external-link-alt"></i> Paper</a>
+              <a class="pub-link pdf" href="https://drive.google.com/file/d/1e_G5g-EELnKn8mQZbieZQXdgxM9u78gf/view?usp=drive_link" target="_blank"><i class="fas fa-file-pdf"></i> PDF</a>
             </div>
           </li>
 
           <li class="pub-item">
-            <div class="pub-title"><a href="#" target="_blank">Contingency analysis and adoption of STATCOM in highly renewable energy penetrated Western Grid of Bangladesh</a></div>
+            <div class="pub-title"><a href="https://www.tandfonline.com/doi/full/10.1080/23311916.2022.2076550" target="_blank">Contingency analysis and adoption of STATCOM in highly renewable energy penetrated Western Grid of Bangladesh</a></div>
             <div class="pub-authors">Pollen Barua; <strong>Ratul Barua</strong>; V. Shekher; M. Quamruzzaman; M. G. Rabbani</div>
             <div class="pub-venue">Cogent Engineering, Vol. 9, No. 1, 2022 <span class="venue-tag">Journal</span></div>
             <div class="pub-links">
-              <a class="pub-link" href="#" target="_blank"><i class="fas fa-external-link-alt"></i> Paper</a>
+              <a class="pub-link" href="https://www.tandfonline.com/doi/full/10.1080/23311916.2022.2076550" target="_blank"><i class="fas fa-external-link-alt"></i> Paper</a>
+              <a class="pub-link pdf" href="https://drive.google.com/file/d/1u5rgCJ4r6SEqSkV8dJhmVA3WmwTBW1Gv/view?usp=drive_link" target="_blank"><i class="fas fa-file-pdf"></i> PDF</a>
             </div>
           </li>
 
           <li class="pub-item">
-            <div class="pub-title"><a href="#" target="_blank">Machine Learning Based Solar Energy Forecasting and Wind-Solar Based Hybrid Grid Arrangement at Patenga Coastal Area, Bangladesh</a></div>
+            <div class="pub-title"><a href="https://ieeexplore.ieee.org/abstract/document/9929754" target="_blank">Machine Learning Based Solar Energy Forecasting and Wind-Solar Based Hybrid Grid Arrangement at Patenga Coastal Area, Bangladesh</a></div>
             <div class="pub-authors">Pollen Barua; <strong>Ratul Barua</strong></div>
             <div class="pub-venue">2021 IEEE International Conference on Power, Electrical, Electronic and Industrial Applications <span class="venue-tag">PEEIACON 2021</span></div>
             <div class="pub-links">
-              <a class="pub-link" href="#" target="_blank"><i class="fas fa-external-link-alt"></i> Paper</a>
+              <a class="pub-link" href="https://ieeexplore.ieee.org/abstract/document/9929754" target="_blank"><i class="fas fa-external-link-alt"></i> Paper</a>
+              <a class="pub-link pdf" href="https://drive.google.com/file/d/1lcwifyifTzERxXIgETEj_V-QcFh90f7q/view?usp=drive_link" target="_blank"><i class="fas fa-file-pdf"></i> PDF</a>
             </div>
           </li>
 
         </ol>
       </div>
       <p style="font-size:0.82rem; color:#888; margin-top:0.6rem; text-align:right;">
-        Full list on <a href="#" target="_blank">Google Scholar →</a>
+        Full list on <a href="https://scholar.google.com/citations?user=pBHm1fIAAAAJ&hl=en" target="_blank">Google Scholar →</a>
       </p>
 
       <h3>Research Projects Under Review</h3>
@@ -365,13 +375,13 @@ footer { margin-top: 4rem; border-top: 1px solid #e0e0e0; padding: 1.5rem 2rem; 
         <div class="edu-degree">BSc in Computer Science and Engineering</div>
         <div class="edu-school">Port City International University (PCIU), Chattogram, Bangladesh</div>
         <div class="edu-date">January 2018 – February 2022</div>
-        <div class="edu-details">CGPA: 3.59 / 4.00</div>
+        <!-- <div class="edu-details">CGPA: 3.59 / 4.00</div> -->
       </div>
 
-      <div class="edu-item">
-        <div class="edu-degree">IELTS</div>
+      <!-- <div class="edu-item">
+        <div class="edu-degree">IELTS <a class="cert-link" href="https://drive.google.com/file/d/1dT28pexGXgYIDYMZz-ZJkS7kJs6T1XsW/view?usp=sharing" target="_blank">[Certificate]</a></div>
         <div class="edu-details">Overall 6.5 &nbsp;·&nbsp; Listening 6.5 &nbsp;·&nbsp; Reading 6.5 &nbsp;·&nbsp; Writing 7.0 &nbsp;·&nbsp; Speaking 5.5</div>
-      </div>
+      </div> -->
 
       <h2>Awards &amp; Honors</h2>
       <ul class="research-areas">
@@ -386,26 +396,26 @@ footer { margin-top: 4rem; border-top: 1px solid #e0e0e0; padding: 1.5rem 2rem; 
       <h2>Professional Training</h2>
 
       <div class="training-item">
-        <div class="training-name">Faculty Training and Development Program</div>
+        <div class="training-name">Faculty Training and Development Program <a class="cert-link" href="https://drive.google.com/file/d/1jEMUe2wm1uej2wsQtL59qTAO1r1dGB2Q/view?usp=sharing" target="_blank">[Certificate]</a></div>
         <div class="training-org">Institutional Quality Assurance Cell (IQAC), Port City International University, Bangladesh</div>
       </div>
 
       <div class="training-item">
-        <div class="training-name">Concept and Development of Outcome Based Education (OBE) Curriculum for Quality Improvement in Higher Education</div>
+        <div class="training-name">Concept and Development of Outcome Based Education (OBE) Curriculum for Quality Improvement in Higher Education <a class="cert-link" href="https://drive.google.com/file/d/1U0UK_aMC92ZbeMlzo7sA44s9S4CfMLU7/view?usp=drive_link" target="_blank">[Certificate]</a></div>
         <div class="training-org">Institutional Quality Assurance Cell (IQAC), Port City International University, Bangladesh</div>
       </div>
 
       <h2>Online Courses</h2>
       <div class="training-item">
-        <div class="training-name">Computer Vision – Object Detection with OpenCV and Python</div>
+        <div class="training-name">Computer Vision – Object Detection with OpenCV and Python <a class="cert-link" href="https://coursera.org/verify/GAW27LA8TNNJ" target="_blank">[Certificate]</a></div>
         <div class="training-org">Coursera</div>
       </div>
       <div class="training-item">
-        <div class="training-name">Traffic Sign Classification Using Deep Learning in Python/Keras</div>
+        <div class="training-name">Traffic Sign Classification Using Deep Learning in Python/Keras <a class="cert-link" href="https://coursera.org/verify/VP4TWL52T4NH" target="_blank">[Certificate]</a></div>
         <div class="training-org">Coursera Project Network</div>
       </div>
       <div class="training-item">
-        <div class="training-name">Programming for Everybody (Getting Started with Python)</div>
+        <div class="training-name">Programming for Everybody (Getting Started with Python) <a class="cert-link" href="https://coursera.org/verify/432RFK8DEHTS" target="_blank">[Certificate]</a></div>
         <div class="training-org">Coursera | University of Michigan</div>
       </div>
     </section>
