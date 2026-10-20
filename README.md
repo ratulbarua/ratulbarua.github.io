@@ -1,8 +1,7 @@
-# Shafayet Nur — Academic Portfolio
+# Ratul Barua — Academic Portfolio
 
-Personal portfolio website for Shafayet Nur, CS PhD Student at Northern Illinois University.
-
-🌐 **Live Site:** [shafayet-nur.github.io](https://shafayet-nur.github.io)
+Personal portfolio website for Ratul Barua, Lecturer, Dept. of CSE, Port City International Univerity
+🌐 **Live Site:** [ratulbarua.github.io](https://ratulbarua.github.io)
 
 ## Tech Stack
 - Pure HTML/CSS/JS (no build step needed)
